@@ -1,0 +1,277 @@
+/* undraw  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --very_pale_cyan: hsl(193, 100%, 96%);
+  --very_dark_cyan: hsl(192, 100%, 9%);
+  --grayish_blue: hsl(208, 11%, 55%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex > div,
+.flex > ul {
+  flex: 1;
+}
+.btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 4px 15px -6px lightgrey;
+  padding: 15px 50px;
+  font-size: 0.8;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 0 0 1px black;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--pink);
+  color: white;
+}
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--very_dark_cyan);
+  text-shadow: 0 0 2px var(--grayish_blue);
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  /* opacity: 0.9; */
+}
+i {
+  display: inline-block;
+  border-radius: 60px;
+  /* box-shadow: 0px 0px 2px #888; */
+  padding: 0.5em 0.6em;
+  border-color: white;
+}
+
+/* header */
+header {
+  background-image: url("./images/bg-hero-desktop.svg");
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--very_pale_cyan);
+}
+header p {
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+nav img {
+  width: 15%;
+}
+
+.left_content {
+  margin-top: 40px;
+  width: 40%;
+}
+.left_content p {
+  margin-bottom: 30px;
+}
+
+.header-img {
+  width: 55%;
+}
+.header-img img {
+  width: 100%;
+  margin-left: 40px;
+}
+
+/* main */
+main p {
+  color: var(--grayish_blue);
+}
+.box {
+  box-shadow: 0 0 2px lightgray;
+  padding: 20px 20px 20px 60px;
+  margin: 40px;
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* small box */
+.box_right img {
+  width: 80%;
+  margin-left: 50px;
+}
+.box_left img {
+  width: 80%;
+  margin-right: 50px;
+}
+
+.small_box {
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  margin-bottom: -120px;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--very_dark_cyan);
+  padding: 100px 0;
+  color: white;
+}
+
+footer img {
+  width: 15%;
+}
+
+footer .flex {
+  margin-top: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .first {
+  flex-basis: 14%;
+  margin-right: 20px;
+}
+
+.social {
+  list-style-type: none;
+}
+.social li {
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+}
+
+.social i {
+  border: 1px solid white;
+}
+.copy {
+  text-align: right;
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .container {
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+  nav {
+    margin-bottom: 20px;
+  }
+  nav img {
+    width: 30%;
+  }
+  .left_content {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+  }
+  .header-img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .header-img img {
+    margin-left: 0;
+  }
+  .box {
+    padding: 20px 20px 20px 20px;
+    margin: 15px;
+    flex-direction: column-reverse;
+  }
+  .box.middle {
+    flex-direction: column;
+  }
+  .box_right img,
+  .box_left img {
+    margin: 0;
+    width: 100%;
+  }
+  .small_box {
+    width: 93%;
+    margin-bottom: -80px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  footer img {
+    width: 35%;
+  }
+  footer .flex {
+    align-items: center;
+  }
+  footer ul {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  footer .first {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  footer .container {
+    text-align: left;
+  }
+
+  .social {
+    text-align: center;
+  }
+  .copy {
+    text-align: center;
+  }
+}
